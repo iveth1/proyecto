@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+
+{% block extrahead %} 
+<title>Crear Cuenta</title>
+{% endblock extrahead%} 
+
+
+{% block content %} 
+<div class="container">
+<h1>Crear Cuenta</h1>
+<form action="" method="post">
+    {% csrf_token %} 
+    {{ form }}<br>
+    <input type="submit" value="Crear cuenta">
+    <div class="sign-up">
+        ¿Ya tienes una cuenta? <a href="{% url 'iniciar_sesion'%}">Iniciar Sesión</a>
+    </div>
+</form>
+{% endblock content %} 
+</div>

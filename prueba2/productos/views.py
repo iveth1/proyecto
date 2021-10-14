@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.template import context, loader
 from productos.forms import UsuarioForm
 from .models import Usuario
-
+from .models import Foto
 # Create your views here.
 
 def home(request):
@@ -20,9 +20,9 @@ def index(request):
     return HttpResponse(template.render(context, request))
 
 def catalogo(request):
-    usuarios = Usuario.objects.all()
+    fotos = Foto.objects.all()
     template = loader.get_template('productos/catalogo.html')
-    context = {'usuarios':usuarios,}
+    context = {'fotos':fotos,}
     return HttpResponse(template.render(context,request))
     
 def new_usuario(request):

@@ -4,6 +4,7 @@ from django.db import models
 # modelo para la entidad foto
 class Foto(models.Model):
    descripcion=models.CharField(max_length=30)
+   
 
 # modelo para la entidad producto
 class Producto(models.Model):

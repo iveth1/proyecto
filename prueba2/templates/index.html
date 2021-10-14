@@ -1,51 +1,59 @@
 {% extends 'base.html' %} 
-
+{% load static %}
 {% block extrahead %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css"> 
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="{% static '/css/index.css' %}" type="text/css" media="screen,projection">
 <title>Home</title>
 {% endblock extrahead%} 
 
 {% block content %} 
-
-<div class="container">
-    <h1>Tienda virtual Cosméticos</h1>
+<div class="container" >
+    <h1>Tienda virtual  AIM Cosméticos</h1>
+    <div class="portada ">
+      <img id=img3 src="{% static 'img/imagen1.jpg' %}"/>
+        <p>
+           AIM Es una tienda virtual dedicada a la distribucion de productos de belleza, tenemos la mejor
+            calidad para ti, manejamos precios absequibles y una excelente atencion.   
+            Nuestra empresa creada para resaltar tu belleza por medio de
+          nuestros productos ayudandote a verte más empoderada y segura
+      </p>
+    </div>
     <div class="tz-gallery">
       <div class="row">
         <div class="col-sm-6 col-md-4">
-          <a class="lightbox" href="">
-            <img src="../images/park.jpg" alt="Cosmetico 1">
+          <a class="lightbox" href="{% static 'img/cosmeticos3.jpg' %}">
+            <img id=img4 src="{% static 'img/cosmeticos3.jpg' %}" alt="Cosmetico 1">
           </a>
         </div>
         <div class="col-sm-6 col-md-4">
-          <a class="lightbox" href="../images/park.jpg">
-            <img src="../images/park.jpg" alt="Cosmetico 2">
+          <a class="lightbox" href="{% static 'img/imagen2.jpg' %}">
+            <img id=img4 src="{% static 'img/imagen2.jpg' %}" alt="Cosmetico 2">
           </a>
         </div>
         <div class="col-sm-6 col-md-4">
-          <a class="lightbox" href="">
-            <img src="" alt="Cosmetico 3">
+          <a class="lightbox" href="{% static 'img/cosmeticos2.jpg' %}">
+            <img id=img4 src="static/img/cosmeticos2.jpg" alt="Cosmetico 3">
           </a>
         </div>
         <div class="col-sm-6 col-md-4">
-          <a class="lightbox" href="img/cosmeticos1.jpg">
-            <img src="img/cosmeticos2.jpg" alt="Cosmetico 4">
+          <a class="lightbox" href="{% static 'img/imagen3.jpg' %}">
+            <img id=img4 src="{% static 'img/imagen3.jpg' %}" alt="Cosmetico 4">
           </a>
         </div>
         <div class="col-sm-6 col-md-4">
-          <a class="lightbox" href="img/cosmeticos.png">
-            <img src="img/cosmeticos3.png" alt="Cosmetico">
+          <a class="lightbox" href="{% static 'img/imagen4.jpg' %}">
+            <img id=img4 src="{% static 'img/imagen4.jpg' %}" alt="Cosmetico 5">
           </a>
         </div>
         <div class="col-sm-6 col-md-4">
-          <a class="lightbox" href="img/cosmeticos.png">
-            <img src="img/cosmeticos.png" alt="Cosmetico 5">
+          <a class="lightbox" href="{% static 'img/imagen5.jpg' %}">
+            <img id=img4 src="{% static 'img/imagen5.jpg' %}" alt="Cosmetico 6">
           </a>
         </div>
       </div>
-    </div> 
-    <p></p>
+    </div>   
 </div>
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>

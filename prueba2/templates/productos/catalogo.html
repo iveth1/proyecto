@@ -1,58 +1,91 @@
 {% extends 'base.html' %} 
-
+{% load static %}
 {% block extrahead %} 
+<link rel="stylesheet" href="{% static '/css/catalogo.css' %}" type="text/css" media="screen,projection">
 <title>Catálogo</title>
 {% endblock extrahead%} 
 
 {% block content %} 
 <div class="container">
     <h1>Catalogo de cosméticos</h1>
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Producto</th>
-                <th scope="col">Descripción</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Breve descripcion del producto</td>
-                <td><button>Ver mas detalles</button></td>
-                
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Breve descripcion del producto</td>
-                <td><button>Ver mas detalles</button></td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Breve descripcion del producto</td>
-                <td><button>Ver mas detalles</button></td>
-              </tr> 
-              <tr>
-                <th scope="row">4</th>
-                <td>Breve descripcion del producto</td>
-                <td><button>Ver mas detalles</button></td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Breve descripcion del producto</td>
-                <td><button>Ver mas detalles</button></td>
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Breve descripcion del producto</td>
-                <td><button>Ver mas detalles</button></td>
-              </tr>
-              <tr>
-                <th scope="row">7</th>
-                <td>Breve descripcion del producto</td>
-                <td><button>Ver mas detalles</button></td>
-              </tr>
-        </table>
+      <div class="gallery">
+        <a target="_blank" href="{% static 'img/labial.jpg' %}">
+          <img id=imagen src="{% static 'img/labial.jpg' %}" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">Labial</div>
+        <button>Ver más detalles</button>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="{% static 'img/base.jpg' %}">
+          <img id=imagen src="{% static 'img/base.jpg' %}" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">Base</div>
+        <button>Ver más detalles</button>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="{% static 'img/iluminador.jpg' %}">
+          <img id=imagen src="{% static 'img/iluminador.jpg' %}" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Iluminador</div>
+        <button>Ver más detalles</button>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="{% static 'img/pestañina.jpg' %}">
+          <img id=imagen src="{% static 'img/pestañina.jpg' %}" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Pestañina</div>
+        <button>Ver más detalles</button>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="{% static 'img/sombra.jpg' %}">
+          <img id=imagen src="{% static 'img/sombra.jpg' %}" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Paleta de sombras</div>
+        <button type="button">Ver más detalles</button>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="{% static 'img/delineador.jpg' %}">
+          <img id=imagen src="{% static 'img/delineador.jpg' %}" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Delineador</div>
+        <button>Ver más detalles</button>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="{% static 'img/lapiz.jpg' %}">
+          <img id=imagen src="{% static 'img/lapiz.jpg' %}" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Lapiz de ojos</div>
+        <button>Ver más detalles</button>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="{% static 'img/rubor.jpg' %}">
+          <img id=imagen src="{% static 'img/rubor.jpg' %}" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Rubor</div>
+        <button>Ver más detalles</button>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="{% static 'img/brillo.jpg' %}">
+          <img id=imagen src="{% static 'img/brillo.jpg' %}" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Brillo</div>
+        <button>Ver más detalles</button>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="{% static 'img/corrector.jpg' %}">
+          <img id=imagen src="{% static 'img/corrector.jpg' %}" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Corrector líquido</div>
+        <button>Ver más detalles</button>
       </div>
    
 {% endblock content %}

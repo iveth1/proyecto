@@ -6,14 +6,17 @@
 {% endblock extrahead%} 
 
 {% block content %} 
+<div>
 <div class="container">
-    <h1>Catalogo de cosméticos</h1>
+    <h1>Catálogo de cosméticos</h1>
       <div class="gallery">
         <a target="_blank" href="{% static 'img/labial.jpg' %}">
           <img id=imagen src="{% static 'img/labial.jpg' %}" alt="Cinque Terre" width="600" height="400">
         </a>
         <div class="desc">Labial</div>
-        <button>Ver más detalles</button>
+        <div style="text-align:center">    
+          <a style="text-align: center;" href="{% url 'producto'%}">Ver más detalles</a>
+        </div>
       </div>
       
       <div class="gallery">
@@ -21,7 +24,9 @@
           <img id=imagen src="{% static 'img/base.jpg' %}" alt="Forest" width="600" height="400">
         </a>
         <div class="desc">Base</div>
-        <button>Ver más detalles</button>
+        <div style="text-align:center">    
+          <a style="text-align: center;" href="{% url 'bases'%}">Ver más detalles</a>
+        </div>
       </div>
       
       <div class="gallery">
@@ -29,7 +34,9 @@
           <img id=imagen src="{% static 'img/iluminador.jpg' %}" alt="Northern Lights" width="600" height="400">
         </a>
         <div class="desc">Iluminador</div>
-        <button>Ver más detalles</button>
+        <div style="text-align:center">    
+          <a style="text-align: center;" href="{% url 'iluminador'%}">Ver más detalles</a>
+        </div>
       </div>
       
       <div class="gallery">
@@ -37,7 +44,9 @@
           <img id=imagen src="{% static 'img/pestañina.jpg' %}" alt="Northern Lights" width="600" height="400">
         </a>
         <div class="desc">Pestañina</div>
-        <button>Ver más detalles</button>
+        <div style="text-align:center">    
+          <a style="text-align: center;" href="{% url 'pestanina'%}">Ver más detalles</a>
+        </div>
       </div>
 
       <div class="gallery">
@@ -45,7 +54,9 @@
           <img id=imagen src="{% static 'img/sombra.jpg' %}" alt="Northern Lights" width="600" height="400">
         </a>
         <div class="desc">Paleta de sombras</div>
-        <button type="button">Ver más detalles</button>
+        <div style="text-align:center">    
+          <a style="text-align: center;" href="{% url 'producto'%}">Ver más detalles</a>
+        </div>
       </div>
       
       <div class="gallery">
@@ -53,7 +64,9 @@
           <img id=imagen src="{% static 'img/delineador.jpg' %}" alt="Northern Lights" width="600" height="400">
         </a>
         <div class="desc">Delineador</div>
-        <button>Ver más detalles</button>
+        <div style="text-align:center">    
+          <a style="text-align: center;" href="{% url 'producto'%}">Ver más detalles</a>
+        </div>
       </div>
 
       <div class="gallery">
@@ -61,7 +74,9 @@
           <img id=imagen src="{% static 'img/lapiz.jpg' %}" alt="Northern Lights" width="600" height="400">
         </a>
         <div class="desc">Lapiz de ojos</div>
-        <button>Ver más detalles</button>
+        <div style="text-align:center">    
+          <a style="text-align: center;" href="{% url 'producto'%}">Ver más detalles</a>
+        </div>
       </div>
       
       <div class="gallery">
@@ -69,7 +84,9 @@
           <img id=imagen src="{% static 'img/rubor.jpg' %}" alt="Northern Lights" width="600" height="400">
         </a>
         <div class="desc">Rubor</div>
-        <button>Ver más detalles</button>
+        <div style="text-align:center">    
+          <a style="text-align: center;" href="{% url 'producto'%}">Ver más detalles</a>
+        </div>
       </div>
 
       <div class="gallery">
@@ -77,7 +94,9 @@
           <img id=imagen src="{% static 'img/brillo.jpg' %}" alt="Northern Lights" width="600" height="400">
         </a>
         <div class="desc">Brillo</div>
-        <button>Ver más detalles</button>
+        <div style="text-align:center">    
+          <a style="text-align: center;" href="{% url 'producto'%}">Ver más detalles</a>
+        </div>
       </div>
       
       <div class="gallery">
@@ -85,9 +104,14 @@
           <img id=imagen src="{% static 'img/corrector.jpg' %}" alt="Northern Lights" width="600" height="400">
         </a>
         <div class="desc">Corrector líquido</div>
-        <button>Ver más detalles</button>
-      </div>
-   
-{% endblock content %}
-</div>
+        <div style="text-align:center">    
+          <a style="text-align: center;" href="{% url 'producto'%}">Ver más detalles</a>
+        </div>
+      </div>  
+</div> 
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+{% endblock content %}
+
+
+  

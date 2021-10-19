@@ -6,15 +6,26 @@
 
 
 {% block content %} 
+<br>
 <div class="container">
-<h1>Crear Cuenta</h1>
-<form action="" method="post">
-    {% csrf_token %} 
-    {{ form }}<br>
-    <input type="submit" value="Crear cuenta">
-    <div class="sign-up">
-        ¿Ya tienes una cuenta? <a href="{% url 'iniciar_sesion'%}">Iniciar Sesión</a>
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body" style="background-color: rgb(223, 222, 222);">
+                  <h1>Crear Cuenta</h1>
+                  <form action="" method="post">
+                    {% csrf_token %} 
+                    {{ form }}<br>
+                    <input type="submit" value="Crear cuenta" class="btn btn-primary btn-block">
+                    <div class="sign-up">
+                     ¿Ya tienes una cuenta? <a href="{% url 'iniciar_sesion'%}">Iniciar Sesión</a>
+                    </div>
+                   </form>
+                </div>
+            </div>
+        </div>
     </div>
-</form>
+</div><br><br><br><br>
 {% endblock content %} 
-</div>
+
+

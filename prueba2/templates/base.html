@@ -5,13 +5,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static '/css/base.css' %}" type="text/css" media="screen,projection">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" media="screen,projection">
+        
         {% block extrahead %} 
         {% endblock extrahead%} 
     </head>
     <body>
         {% block navbar %} 
-        <nav id=nav  class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav id=menu  class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Cosmeticos AIM</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,27 +33,119 @@
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'iniciar_sesion'%}">Iniciar Sesión</a>
                   </li>
+                  
                 </ul>
               </div>
-                <button id=buton1 type="button" class="btn btn-primary">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-                   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
-                  </svg> 
-                </button>
             </div>
-          </nav>
-        {% endblock navbar %} 
+        {% endblock navbar %}
+        </nav> 
 
         {% block content %} 
         {% endblock content %} 
-        
-        
+      {% block footer %}
+      <footer>
+          <div class="footer-content">
+            <h6 class="text-muted lead">CONTACTO:</h6>
+            <p>Carrera 10 No. 45-51 Local 5<br>
+               Bucaramanga<br>
+               Teléfonos: 300011153 – 3115555910<br></p>
+            <ul class="socials">
+                <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+          </div>
+          <div class="footer-bottom">
+              <p class="text-muted small">AIM, cosmeticos de belleza @2021.<br> Todos los derechos reservados.</p>
+          </div>
+      {% endblock footer %}
+      </footer>
+       
+     <!--<style>
+       #menu{
+         background-color: #111;
+       }
+       *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        footer{
+          left: 0;
+          right: 0;
+          background: #111;
+          height: auto;
+          width: 100vw;
+          font-family: "Open Sans";
+          padding-top: 40px;
+          color: #fff;
+        }
+        .footer-content{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+        }
+        .footer-content h6{
+          font-size: 1.8rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          line-height: 3rem;
+        }
+        .footer-content p{
+          max-width: 500px;
+          margin: 10px auto;
+          line-height: 28px;
+          font-size: 14px;
+        }
+        .socials{
+          list-style: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 1rem 0 3rem 0;
+        }
+        .socials li{
+          margin: 0 10px;
+        }
+        .socials a{
+          text-decoration: none;
+          color: #fff;
+        }
+        .socials a i{
+          font-size: 1.1rem;
+          transition: color .4s ease;
+        }
+        .socials a:hover i{
+          color:aqua;
+        }
+        .footer-bottom{
+          background: #000;
+          width: 100vw;
+          padding: 20px 0;
+          text-align: center;
+        }
+        .footer-bottom p{
+          font-size: 14px;
+          word-spacing: 2px;
+          text-transform: capitalize;
+        }
+
+        </style> -->
 
 
 
-        
+
+
+
+
+
+
+
         {% block scripts %}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> 
+        <script src="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></script>
         {% endblock scripts %}
     </body>
 </html>

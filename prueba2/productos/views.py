@@ -6,7 +6,8 @@ from django.http import HttpResponse
 from django.template import context, loader
 from productos.forms import UsuarioForm
 from .models import Usuario
-from .models import Foto
+from django.contrib import messages
+
 # Create your views here.
 
 def home(request):
@@ -20,9 +21,8 @@ def index(request):
     return HttpResponse(template.render(context, request))
 
 def catalogo(request):
-    fotos = Foto.objects.all()
     template = loader.get_template('productos/catalogo.html')
-    context = {'fotos':fotos,}
+    context = {}
     return HttpResponse(template.render(context,request))
     
 def new_usuario(request):
@@ -35,12 +35,33 @@ def new_usuario(request):
             telefono = form.cleaned_data['telefono']
             correo = form.cleaned_data['correo']
             clave = form.cleaned_data['clave']
-            usuario = Usuario(nombre=nombre,apellido=apellido,direccion=direccion,telefono=telefono,correo=correo,clave=clave)
+            usuario = Usuario(nombre=nombre,apellido=apellido,direccion=direccion,telefono=telefono,correo=correo, clave=clave)
             usuario.save()
+            messages.success(request, "Te has registrado correctamente")
             return HttpResponseRedirect(reverse('catalogo'))
-    else:
-        form = UsuarioForm()
+    else: 
+        form = UsuarioForm()  
     return render(request, 'productos/crear_usuario.html', {'form':form})
+
+def producto(request):
+    template =loader.get_template('productos/producto.html')
+    context = {}
+    return HttpResponse(template.render(context,request))
+
+def bases(request):
+    template =loader.get_template('productos/bases.html')
+    context = {}
+    return HttpResponse(template.render(context,request))
+
+def iluminador(request):
+    template =loader.get_template('productos/iluminador.html')
+    context = {}
+    return HttpResponse(template.render(context,request))
+
+def pestanina(request):
+    template =loader.get_template('productos/pestanina.html')
+    context = {}
+    return HttpResponse(template.render(context,request))
 
 
 

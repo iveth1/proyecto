@@ -1,0 +1,54 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block extrahead %} 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css"> 
+<link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css" media="screen,projection">
+
+<title>Producto</title>
+{% endblock extrahead%} 
+
+
+{% block content %} 
+<h2 style="text-align: center;">Labiales</h2>
+<div class="container">
+  <div class="row">
+      <!-- Elementos generados a partir del JSON -->
+      <main id="items" class="col-sm-8 row"></main>
+      <!-- Carrito -->
+      <aside class="col-sm-4">
+          <h2>Carrito</h2>
+          <!-- Elementos del carrito -->
+          <ul id="carrito" class="list-group"></ul>
+          <hr>
+          <!-- Precio total -->
+          <p class="text-right">Total: <span id="total"></p>
+          <button id="boton-vaciar" class="btn btn-primary">Vaciar</button><br><br>
+          <button class="btn btn-primary" href="#">Efectuar comprar</button><br><br>
+          <button class="btn btn-primary" href="#">Ver comentarios</button>
+      </aside>
+  </div>
+</div><br><br><br><br><br>
+<script>
+const baseDeDatos = [
+        {
+            id: 1,
+            nombre: 'Labial Mate',
+            precio: 15000,
+            imagen: "{% static 'img/labial.jpg' %}",
+            descripcion: 'Color Rojo'
+        },
+        {
+            id: 2,
+            nombre: 'Labial Mate',
+            precio: 18000,
+            imagen: "{% static 'img/labial5.jpg' %}",
+            descripcion: 'Color Rojo Intenso'
+        }
+
+    ];
+</script>
+
+<script src="{% static 'js/producto.js' %}"></script>
+
+{% endblock content %} 
+

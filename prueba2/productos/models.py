@@ -1,14 +1,11 @@
 from django.db import models
 
 # Create your models here.
-# modelo para la entidad foto
 class Foto(models.Model):
-   descripcion=models.CharField(max_length=30)
-   
-
+    foto=models.CharField(max_length=30)
 # modelo para la entidad producto
 class Producto(models.Model):
-    foto = models.ForeignKey(Foto, null=True, blank=True, on_delete=models.CASCADE)
+    foto=models.ForeignKey(Foto, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=30)
     precio = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=30)

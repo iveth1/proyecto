@@ -5,24 +5,30 @@
 {% endblock extrahead%} 
 
 {% block content %}
+<br>
 <div class="container">
-		<h3 class="card-title text-center">Iniciar Sesión</h3>
-		<div class="card-text">
-			<form>
-				<div class="form-group">
-					<label for="exampleInputEmail1">Correo electrónico</label>
-					<input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
-				</div>
-				<div class="form-group">
-					<label for="exampleInputPassword">Contraseña</label>
-					<input type="password" class="form-control form-control-sm" id="exampleInputPassword">
-                    <a href="#" style="float:right;font-size:12px;">¿Olvidaste tu contraseña?</a>
-				</div><br>
-				<button type="submit" class="btn btn-primary btn-block" href="{% url 'catalogo'%}">Sign in</button>
-				<div class="sign-up">
+	<div class="row">
+		<div class="col-12 col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body" style="background-color: rgb(223, 222, 222);">
+		          <h3 class="card-title text-center">Iniciar Sesión</h3>
+			      <form method="post">
+				    <div class="form-group">
+					   <label for="exampleInputEmail1">Correo electrónico</label>
+					   <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+				    </div>
+				    <div class="form-group">
+					   <label for="exampleInputPassword">Contraseña</label>
+					   <input type="password" class="form-control form-control-sm" id="exampleInputPassword">
+				    </div><br>
+				    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+				    <div class="sign-up">
 					¿No tienes una cuenta? <a href="{% url 'new_usuarios'%}">Crear cuenta</a>
+				    </div>
+			      </form>
 				</div>
-			</form>
+			</div>
 		</div>
+	</div>
+</div><br><br><br><br><br><br><br><br><br>
 {% endblock content %} 
-</div>

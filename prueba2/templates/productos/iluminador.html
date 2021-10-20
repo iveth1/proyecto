@@ -9,36 +9,36 @@
 
 
 {% block content %} 
-<h2 style="text-align: center;">Bases</h2>
+<h2 style="text-align: center;">Iluminador</h2>
 <div class="container">
   <div class="row">
       <main id="items" class="col-sm-8 row"></main>
       <aside class="col-sm-4">
-          <h2>Carrito</h2>
+          <h2>Carrito de compras</h2>
           <ul id="carrito" class="list-group"></ul>
           <hr>
 
           <p class="text-right">Total: <span id="total"></p>
           <button id="boton-vaciar" class="btn btn-primary">Vaciar</button><br><br>
-          <button class="btn btn-primary" href="#">Efectuar comprar</button><br><br>
-          <button class="btn btn-primary" href="#">Ver comentarios</button>
+          <a href="https://wa.me/3213332460" target="_parent"><button class="btn btn-primary">Efectuar compra</button></a>
+          
       </aside>
   </div>
 </div><br><br><br><br><br>
 <script>
 const baseDeDatos = [
         {
-            id: 1,
+            id: 5,
             nombre: 'Iluminador',
             precio: 8000,
             imagen: "{% static 'img/iluminador11.jpg' %}",
             descripcion: 'Iluminador facial larga duración'
         },
         {
-            id: 2,
+            id: 6,
             nombre: 'Iluminador',
             precio: 7000,
-            imagen: "{% static 'img/iluminador2.jpg' %}",
+            imagen: "{% static 'img/iluminador3.jpg' %}",
             descripcion: 'Iluminador de vainilla'
         }
 

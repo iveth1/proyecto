@@ -63,6 +63,34 @@ def pestanina(request):
     context = {}
     return HttpResponse(template.render(context,request))
 
+def sombras(request):
+    template =loader.get_template('productos/sombras.html')
+    context = {}
+    return HttpResponse(template.render(context,request))
 
+def delineador(request):
+    template =loader.get_template('productos/delineador.html')
+    context = {}
+    return HttpResponse(template.render(context,request))
+
+def lapiz(request):
+    template =loader.get_template('productos/lapiz.html')
+    context = {}
+    return HttpResponse(template.render(context,request))
+
+def rubor(request):
+    template =loader.get_template('productos/rubor.html')
+    context = {}
+    return HttpResponse(template.render(context,request))
+
+def brillo(request):
+    template =loader.get_template('productos/brillo.html')
+    context = {}
+    return HttpResponse(template.render(context,request))
+
+def corrector(request):
+    template =loader.get_template('productos/corrector.html')
+    context = {}
+    return HttpResponse(template.render(context,request))
 
 

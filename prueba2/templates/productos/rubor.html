@@ -9,7 +9,7 @@
 
 
 {% block content %} 
-<h2 style="text-align: center;">Labiales</h2>
+<h2 style="text-align: center;">Rubor</h2>
 <div class="container">
   <div class="row">
       
@@ -24,24 +24,25 @@
           <p class="text-right">Total: <span id="total"></p>
           <button id="boton-vaciar" class="btn btn-primary">Vaciar</button><br><br>
           <a href="https://wa.me/3213332460" target="_parent"><button class="btn btn-primary">Efectuar compra</button></a>
+          
       </aside>
   </div>
 </div><br><br><br><br><br>
 <script>
 const baseDeDatos = [
         {
-            id: 1,
-            nombre: 'Labial Mate',
-            precio: 15000,
-            imagen: "{% static 'img/labial.jpg' %}",
-            descripcion: 'Color Rojo'
+            id: 15,
+            nombre: 'Rubor',
+            precio: 10000,
+            imagen: "{% static 'img/rubor1.jpg' %}",
+            descripcion: 'Rubor tono 2'
         },
         {
-            id: 2,
-            nombre: 'Labial Mate',
-            precio: 18000,
-            imagen: "{% static 'img/labial5.jpg' %}",
-            descripcion: 'Color Rojo Intenso'
+            id: 16,
+            nombre: 'Rubor',
+            precio: 8500,
+            imagen: "{% static 'img/rubor2.jpg' %}",
+            descripcion: 'Rubor tono 3'
         }
 
     ];
@@ -49,5 +50,4 @@ const baseDeDatos = [
 
 <script src="{% static 'js/producto.js' %}"></script>
 
-{% endblock content %} 
-
+{% endblock content %}

@@ -14,28 +14,28 @@
   <div class="row">
       <main id="items" class="col-sm-8 row"></main>
       <aside class="col-sm-4">
-          <h2>Carrito</h2>
+          <h2>Carrito de compras</h2>
           <ul id="carrito" class="list-group"></ul>
           <hr>
 
           <p class="text-right">Total: <span id="total"></p>
           <button id="boton-vaciar" class="btn btn-primary">Vaciar</button><br><br>
-          <button class="btn btn-primary" href="#">Efectuar comprar</button><br><br>
-          <button class="btn btn-primary" href="#">Ver comentarios</button>
+          <a href="https://wa.me/3213332460" target="_parent"><button class="btn btn-primary">Efectuar compra</button></a>
+          
       </aside>
   </div>
 </div><br><br><br><br><br>
 <script>
 const baseDeDatos = [
         {
-            id: 1,
+            id: 3,
             nombre: 'Base Liquida',
             precio: 10000,
             imagen: "{% static 'img/base1.jpg' %}",
             descripcion: 'Base liquida tono 2'
         },
         {
-            id: 2,
+            id: 4,
             nombre: 'Base Mate',
             precio: 22000,
             imagen: "{% static 'img/base3.jpg' %}",

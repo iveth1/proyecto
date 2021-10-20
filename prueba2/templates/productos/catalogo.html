@@ -8,7 +8,7 @@
 {% block content %} 
 <div>
 <div class="container">
-    <h1>Catálogo de cosméticos</h1>
+    <h1 style="text-align: center;">Catálogo de cosméticos</h1>
       <div class="gallery">
         <a target="_blank" href="{% static 'img/labial.jpg' %}">
           <img id=imagen src="{% static 'img/labial.jpg' %}" alt="Cinque Terre" width="600" height="400">
@@ -55,7 +55,7 @@
         </a>
         <div class="desc">Paleta de sombras</div>
         <div style="text-align:center">    
-          <a style="text-align: center;" href="{% url 'producto'%}">Ver más detalles</a>
+          <a style="text-align: center;" href="{% url 'sombras'%}">Ver más detalles</a>
         </div>
       </div>
       
@@ -65,7 +65,7 @@
         </a>
         <div class="desc">Delineador</div>
         <div style="text-align:center">    
-          <a style="text-align: center;" href="{% url 'producto'%}">Ver más detalles</a>
+          <a style="text-align: center;" href="{% url 'delineador'%}">Ver más detalles</a>
         </div>
       </div>
 
@@ -73,9 +73,9 @@
         <a target="_blank" href="{% static 'img/lapiz.jpg' %}">
           <img id=imagen src="{% static 'img/lapiz.jpg' %}" alt="Northern Lights" width="600" height="400">
         </a>
-        <div class="desc">Lapiz de ojos</div>
+        <div class="desc">Lápiz de ojos</div>
         <div style="text-align:center">    
-          <a style="text-align: center;" href="{% url 'producto'%}">Ver más detalles</a>
+          <a style="text-align: center;" href="{% url 'lapiz'%}">Ver más detalles</a>
         </div>
       </div>
       
@@ -85,7 +85,7 @@
         </a>
         <div class="desc">Rubor</div>
         <div style="text-align:center">    
-          <a style="text-align: center;" href="{% url 'producto'%}">Ver más detalles</a>
+          <a style="text-align: center;" href="{% url 'rubor'%}">Ver más detalles</a>
         </div>
       </div>
 
@@ -95,7 +95,7 @@
         </a>
         <div class="desc">Brillo</div>
         <div style="text-align:center">    
-          <a style="text-align: center;" href="{% url 'producto'%}">Ver más detalles</a>
+          <a style="text-align: center;" href="{% url 'brillo'%}">Ver más detalles</a>
         </div>
       </div>
       
@@ -105,7 +105,7 @@
         </a>
         <div class="desc">Corrector líquido</div>
         <div style="text-align:center">    
-          <a style="text-align: center;" href="{% url 'producto'%}">Ver más detalles</a>
+          <a style="text-align: center;" href="{% url 'corrector'%}">Ver más detalles</a>
         </div>
       </div>  
 </div> 

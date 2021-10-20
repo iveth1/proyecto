@@ -23,5 +23,11 @@ urlpatterns =[
     path('catalogo/bases/', views.bases, name='bases'),
     path('catalogo/iluminador/', views.iluminador, name='iluminador'),
     path('catalogo/pestanina/', views.pestanina, name='pestanina'),
+    path('catalogo/sombras/', views.sombras, name='sombras'),
+    path('catalogo/delineador/', views.delineador, name='delineador'),
+    path('catalogo/lapiz/', views.lapiz, name='lapiz'),
+    path('catalogo/rubor/', views.rubor, name='rubor'),
+    path('catalogo/brillo/', views.brillo, name='brillo'),
+    path('catalogo/corrector/', views.corrector, name='corrector'),
 ]
 
